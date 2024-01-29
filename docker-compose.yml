@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+     - /var/lib/mysql
+    ports:
+      - 3306:3306
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=esmax
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+  web:
+    environment:
+      DB_NAME: esmax
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_HOST: db
+      DB_PORT: 3306
+      DOMAIN: localhost
+      DEBUG: 'FALSE'
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+    restart: always
+    ports:
+      - 8082:80
+    volumes:
+      - /sessions

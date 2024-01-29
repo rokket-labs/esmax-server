@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="/static/css/admin-extra.css" />
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            <img src="/static/logo.png" class="header-brand-img" alt="Esmax Licenciatario Petrobras en Chile" style="
+    width: 55%;
+    padding: 0px;
+    border: 0px;
+    background-color: white;
+"></a></h1>
+
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

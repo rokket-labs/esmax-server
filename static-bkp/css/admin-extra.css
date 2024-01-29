@@ -1,0 +1,39 @@
+#header {
+    background-color: white !important;
+    color: #036 !important;
+}
+
+#header a:link, #header a:visited {
+    color: #036 !important;
+}
+
+
+div.breadcrumbs {
+    background: #002071 !important;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: #c4dce8 !important;
+    text-align: left;
+}
+
+#changelist-filter h2 {
+    background: #68a277 !important;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #68a277 !important;
+    color: #fff;
+}
+
+#recent-actions-module > h2 {
+    padding: 8px !important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+    color: white !important;
+}

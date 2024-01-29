@@ -1,0 +1,6 @@
+__pycache__
+*.pyc
+.idea
+.vscode/
+csv_data/lubrax_img.py
+media/
